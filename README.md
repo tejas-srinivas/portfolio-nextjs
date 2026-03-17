@@ -3,9 +3,9 @@
 This Website is built using React.js and CSS which is adaptable on small or large screens.
 
 ## Glimpse of the website
-## [Link](https://tejas-portfolio-using-react.onrender.com/)
+## [Link](https://tejas-srinivas-portfolio.vercel.app/)
 
-![Screenshot of Portfolio](src/portfolio.jpg?raw=true "Optional Title")
+<img width="1707" height="954" alt="Screenshot 2026-03-17 at 7 01 31 PM" src="https://github.com/user-attachments/assets/b160be8c-c6e2-46cb-858e-9791d56e57b4" />
 
 ## Getting Started with Create-React-App
 
