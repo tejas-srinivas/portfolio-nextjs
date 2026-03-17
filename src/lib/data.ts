@@ -11,6 +11,7 @@ export interface PersonalInfo {
   github: string;
   bio: string;
   roles: string[]; // used by hero typewriter role cycling
+  siteHandle: string;
 }
 
 export interface Project {
@@ -53,6 +54,7 @@ export const personalInfo: PersonalInfo = {
   github: "https://github.com/tejas-srinivas",
   bio: "Full Stack Engineer at ToyStack AI, Bangalore. I build scalable systems and clean interfaces — from GraphQL APIs and AWS pipelines to React dashboards and school management platforms. Currently focused on survey tooling with voice processing, multi-language workflows, and analytics.",
   roles: ["Full Stack Engineer", "Backend Dev", "React Developer"],
+  siteHandle: "tejas.dev",
 };
 
 export const projects: Project[] = [

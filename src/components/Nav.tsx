@@ -1,6 +1,7 @@
 "use client";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion, useMotionValue } from "framer-motion";
 import { useState, useEffect } from "react";
+import { personalInfo } from "@/lib/data";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -13,11 +14,19 @@ export default function Nav() {
   const { scrollY } = useScroll();
   // Fade in after hero scrolls out (~90vh). heroThreshold is set after mount
   // so we can read window.innerHeight (not available during SSR).
-  const [heroThreshold, setHeroThreshold] = useState(900);
+  const opacity = useMotionValue(0);
   useEffect(() => {
-    setHeroThreshold(window.innerHeight * 0.9);
-  }, []);
-  const opacity = useTransform(scrollY, [heroThreshold - 80, heroThreshold], [0, 1]);
+    const threshold = window.innerHeight * 0.9;
+    return scrollY.on("change", (y) => {
+      if (y < threshold - 80) {
+        opacity.set(0);
+      } else if (y > threshold) {
+        opacity.set(1);
+      } else {
+        opacity.set((y - (threshold - 80)) / 80);
+      }
+    });
+  }, [scrollY, opacity]);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -34,7 +43,6 @@ export default function Nav() {
         aria-label="Site navigation"
         style={{
           opacity,
-          willChange: "opacity",
           background: "rgba(13,17,23,0.8)",
           backdropFilter: "blur(8px)",
           borderBottom: "1px solid #30363d",
@@ -43,7 +51,7 @@ export default function Nav() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           {/* Logo */}
           <span className="font-mono text-sm" style={{ color: "#3fb950" }}>
-            tejas.dev
+            {personalInfo.siteHandle}
           </span>
 
           {/* Desktop links */}
@@ -69,6 +77,7 @@ export default function Nav() {
           </ul>
 
           {/* Mobile hamburger */}
+          {/* Note: plain <span> elements below — CSS transitions intentional, not motion.* elements */}
           <button
             className="flex flex-col gap-[5px] md:hidden"
             onClick={() => setMenuOpen((v) => !v)}

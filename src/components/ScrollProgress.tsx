@@ -14,8 +14,6 @@ export default function ScrollProgress() {
       style={{ scaleX, transformOrigin: "left", willChange: "transform", background: "#3fb950" }}
       className="fixed top-0 left-0 right-0 z-50 h-[2px]"
       aria-hidden="true"
-      role="progressbar"
-      aria-label="Page scroll progress"
     />
   );
 }
