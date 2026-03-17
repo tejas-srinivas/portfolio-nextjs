@@ -19,7 +19,7 @@ export interface Project {
   description: string;
   tech: string[];
   metric: string;
-  github: string;
+  github?: string;
   featured: boolean;
 }
 
