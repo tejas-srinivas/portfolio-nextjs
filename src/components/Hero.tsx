@@ -93,7 +93,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-3xl">
         {/* Comment line */}
         <p className="font-mono text-sm mb-4" style={{ color: "#8b949e" }}>
-          // hello world
+          {"// hello world"}
         </p>
 
         {/* Typewriter name */}

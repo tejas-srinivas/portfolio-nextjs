@@ -1,5 +1,5 @@
 "use client";
-import { useScroll, useTransform, motion, useMotionValue } from "framer-motion";
+import { useScroll, motion, useMotionValue } from "framer-motion";
 import { useState, useEffect } from "react";
 import { personalInfo } from "@/lib/data";
 
