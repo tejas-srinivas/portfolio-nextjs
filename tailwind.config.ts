@@ -8,9 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        mono: ["var(--font-jetbrains-mono)", "monospace"],
+        sans: ["var(--font-inter)", "sans-serif"],
       },
     },
   },
