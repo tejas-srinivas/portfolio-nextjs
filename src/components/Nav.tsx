@@ -64,10 +64,10 @@ export default function Nav() {
                   className="font-mono text-sm transition-colors duration-200"
                   style={{ color: "#8b949e" }}
                   onMouseEnter={(e) =>
-                    ((e.target as HTMLElement).style.color = "#e6edf3")
+                    ((e.currentTarget as HTMLElement).style.color = "#e6edf3")
                   }
                   onMouseLeave={(e) =>
-                    ((e.target as HTMLElement).style.color = "#8b949e")
+                    ((e.currentTarget as HTMLElement).style.color = "#8b949e")
                   }
                 >
                   {link.label}

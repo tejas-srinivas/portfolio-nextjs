@@ -55,7 +55,7 @@ export default function Skills() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={pillTransition}
-                      className="font-mono text-xs px-3 py-1 rounded-full cursor-default transition-colors duration-200"
+                      className="font-mono text-xs px-3 py-1 rounded-full cursor-default"
                       style={{ background: "#161b22", color: "#e6edf3", border: "1px solid #30363d" }}
                       onMouseEnter={(e) => {
                         (e.currentTarget as HTMLElement).style.borderColor = group.color;

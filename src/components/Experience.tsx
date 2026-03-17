@@ -38,7 +38,7 @@ export default function Experience() {
               key={`${entry.company}-${entry.role}`}
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={entryTransition}
               className="relative mb-12 last:mb-0"
             >

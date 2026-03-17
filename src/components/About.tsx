@@ -81,8 +81,8 @@ export default function About() {
               ["role", personalInfo.role],
               ["location", personalInfo.location],
               ["email", personalInfo.email],
-              ["github", "github.com/tejas-srinivas"],
-              ["status", "open to opportunities"],
+              ["github", personalInfo.githubHandle],
+              ["status", personalInfo.status],
             ].map(([key, value]) => (
               <div key={key} className="flex gap-2 mb-1">
                 <span style={{ color: "#58a6ff" }}>&gt; {key}:</span>

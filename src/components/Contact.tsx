@@ -11,12 +11,12 @@ const CONTACTS = [
   },
   {
     label: "linkedin",
-    value: "linkedin.com/in/tejas-srinivas07",
+    value: personalInfo.linkedinHandle,
     href: personalInfo.linkedin,
   },
   {
     label: "github",
-    value: "github.com/tejas-srinivas",
+    value: personalInfo.githubHandle,
     href: personalInfo.github,
   },
 ];

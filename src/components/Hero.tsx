@@ -93,7 +93,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-3xl">
         {/* Comment line */}
         <p className="font-mono text-sm mb-4" style={{ color: "#8b949e" }}>
-          {"// hello world"}
+          {personalInfo.terminalComment}
         </p>
 
         {/* Typewriter name */}
@@ -142,7 +142,7 @@ export default function Hero() {
 
         {/* Tagline */}
         <p className="mt-4 font-mono text-sm" style={{ color: "#8b949e" }}>
-          $ building scalable systems &amp; clean UIs
+          {personalInfo.tagline}
         </p>
 
         {/* CTAs */}
